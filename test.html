@@ -17,7 +17,7 @@
         }
         //影像顏色反轉
         function invertColor() {
-            var pixels = ctx.getImageData(0, 0, cvs.width, cvs, height) // ImagaData 物件
+            var pixels = ctx.getImageData(0, 0, cvs.width, cvs.height) // ImagaData 物件
             var data = pixels.data;  // 一個像素佔據 4 個資料 (byte)。 r, g, b, A (範圍 0 ~ 255)
             for(var i = 0; i < data.length; i += 4) {
                 data[i] = 255 - data[i];  // 紅
